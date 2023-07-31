@@ -1,6 +1,6 @@
-export const OWNER = "Yidadaa";
-export const REPO = "ChatGPT-Next-Web";
-export const REPO_URL = `https://github.com/${OWNER}/${REPO}`;
+export const OWNER = "Aiden";
+export const REPO = "佩奇聚合 API";
+export const REPO_URL = `https://link3.cc/aipro`;
 export const ISSUE_URL = `https://github.com/${OWNER}/${REPO}/issues`;
 export const UPDATE_URL = `${REPO_URL}#keep-updated`;
 export const RELEASE_URL = `${REPO_URL}/releases`;
