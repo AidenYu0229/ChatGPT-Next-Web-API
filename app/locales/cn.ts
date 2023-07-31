@@ -4,7 +4,7 @@ const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized:
-      "令牌 key 不正确或为空，请在[设置](/#/settings)页填入自己在[佩奇聚合 API](https://api.ai47.top/)中创建的令牌 key\n\n[设置](/#/settings)中已默认填写了本站的接口地址，仅支持[佩奇 API](https://api.ai47.top/)生成的 key，如您需要使用官方 key 请在[设置](/#/settings)中将接口地址删除即可\n\n有任何问题请点击[设置](/#/settings)最下面的【立即清除】\n\n[点击查看使用手册](https://ssw9noe1h6.feishu.cn/docx/Dhjbd7Xmpoy6VwxisCAc8K0dnNn)",
+      "令牌 key 不正确或为空，请在[设置](/#/settings)页填入自己在[佩奇聚合 API ](https://api.ai47.top/)中创建的令牌 key\n\n[设置](/#/settings)中已默认填写了本站的接口地址，仅支持[佩奇 API ](https://api.ai47.top/)生成的 key，如您需要使用官方 key 请在[设置](/#/settings)中将接口地址删除即可\n\n有任何问题请点击[设置](/#/settings)最下面的【立即清除】\n\n[点击查看使用手册](https://ssw9noe1h6.feishu.cn/docx/Dhjbd7Xmpoy6VwxisCAc8K0dnNn)",
   },
   Auth: {
     Title: "需要密码",
@@ -257,7 +257,7 @@ const cn = {
   },
   Store: {
     DefaultTopic: "新的聊天",
-    BotHello: "有什么可以帮你的吗\n\n[设置](/#/settings)中已默认填写了本站的接口地址，仅支持[佩奇聚合 API](https://api.ai47.top/)生成的 key，如您需要使用官方 key 请在[设置](/#/settings)中将接口地址删除即可\n\n有任何问题请点击[设置](/#/settings)最下面的【立即清除】\n\n[点击查看使用手册](https://ssw9noe1h6.feishu.cn/docx/Dhjbd7Xmpoy6VwxisCAc8K0dnNn)",
+    BotHello: "有什么可以帮你的吗\n\n[设置](/#/settings)中已默认填写了本站的接口地址，仅支持[佩奇聚合 API ](https://api.ai47.top/)生成的 key，如您需要使用官方 key 请在[设置](/#/settings)中将接口地址删除即可\n\n有任何问题请点击[设置](/#/settings)最下面的【立即清除】\n\n[点击查看使用手册](https://ssw9noe1h6.feishu.cn/docx/Dhjbd7Xmpoy6VwxisCAc8K0dnNn)",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
