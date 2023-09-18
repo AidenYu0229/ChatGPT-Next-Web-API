@@ -1,10 +1,14 @@
+import { getClientConfig } from "../config/client";
 import { SubmitKey } from "../store/config";
+
+const isApp = !!getClientConfig()?.isApp;
 
 const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
-    Unauthorized:
-      "令牌 key 不正确或为空，请在[设置](/#/settings)页填入自己在[佩奇聚合 API ](https://api.aigc369.com/)中创建的令牌 key\n\n[设置](/#/settings)中已默认填写了本站的接口地址，仅支持[佩奇 API ](https://api.aigc369.com/)生成的 key，如您需要使用官方 key 请在[设置](/#/settings)中将接口地址删除即可\n\n有任何问题请点击[设置](/#/settings)最下面的【立即清除】\n\n[点击查看使用手册](https://ssw9noe1h6.feishu.cn/docx/Dhjbd7Xmpoy6VwxisCAc8K0dnNn)",
+    Unauthorized: isApp
+      ? "检测到无效 API Key，请前往[设置](/#/settings)页检查 API Key 是否配置正确。"
+      : "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key。",
   },
   Auth: {
     Title: "需要密码",
@@ -174,6 +178,49 @@ const cn = {
       Title: "自动生成标题",
       SubTitle: "根据对话内容生成合适的标题",
     },
+    Sync: {
+      CloudState: "云端数据",
+      NotSyncYet: "还没有进行过同步",
+      Success: "同步成功",
+      Fail: "同步失败",
+
+      Config: {
+        Modal: {
+          Title: "配置云同步",
+          Check: "检查可用性",
+        },
+        SyncType: {
+          Title: "同步类型",
+          SubTitle: "选择喜爱的同步服务器",
+        },
+        Proxy: {
+          Title: "启用代理",
+          SubTitle: "在浏览器中同步时，必须启用代理以避免跨域限制",
+        },
+        ProxyUrl: {
+          Title: "代理地址",
+          SubTitle: "仅适用于本项目自带的跨域代理",
+        },
+
+        WebDav: {
+          Endpoint: "WebDAV 地址",
+          UserName: "用户名",
+          Password: "密码",
+        },
+
+        UpStash: {
+          Endpoint: "UpStash Redis REST Url",
+          UserName: "备份名称",
+          Password: "UpStash Redis REST Token",
+        },
+      },
+
+      LocalState: "本地数据",
+      Overview: (overview: any) => {
+        return `${overview.chat} 次对话，${overview.message} 条消息，${overview.prompt} 条提示词，${overview.mask} 个面具`;
+      },
+      ImportFailed: "导入失败",
+    },
     Mask: {
       Splash: {
         Title: "面具启动页",
@@ -262,7 +309,7 @@ const cn = {
   },
   Store: {
     DefaultTopic: "新的聊天",
-    BotHello: "有什么可以帮你的吗\n\n[设置](/#/settings)中已默认填写了本站的接口地址，仅支持[佩奇聚合 API ](https://api.aigc369.com/)生成的 key，如您需要使用官方 key 请在[设置](/#/settings)中将接口地址删除即可\n\n有任何问题请点击[设置](/#/settings)最下面的【立即清除】\n\n[点击查看使用手册](https://ssw9noe1h6.feishu.cn/docx/Dhjbd7Xmpoy6VwxisCAc8K0dnNn)",
+    BotHello: "有什么可以帮你的吗",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
@@ -285,6 +332,9 @@ const cn = {
   },
   Plugin: {
     Name: "插件",
+  },
+  FineTuned: {
+    Sysmessage: "你是一个助手",
   },
   Mask: {
     Name: "面具",
@@ -348,6 +398,10 @@ const cn = {
     Close: "关闭",
     Create: "新建",
     Edit: "编辑",
+    Export: "导出",
+    Import: "导入",
+    Sync: "同步",
+    Config: "配置",
   },
   Exporter: {
     Model: "模型",
