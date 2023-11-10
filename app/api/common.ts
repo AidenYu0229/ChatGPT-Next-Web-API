@@ -13,7 +13,7 @@ export async function requestOpenai(req: NextRequest) {
   const authHeaderName = serverConfig.isAzure ? "api-key" : "Authorization";
 
   let path = `${req.nextUrl.pathname}${req.nextUrl.search}`.replaceAll(
-    "/api/openai/",
+    "https://api.aigc369.com",
     "",
   );
 
