@@ -7,7 +7,7 @@ import { type Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "佩奇聚合 API",
-  description: "ChatGPT 国内版.",
+  description: "ChatGPT 国内版",
   viewport: {
     width: "device-width",
     initialScale: 1,
