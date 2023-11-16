@@ -31,9 +31,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      body {
-      background: linear-gradient(#ffc0cb, #87cefa);
-    }
         <meta name="config" content={JSON.stringify(getClientConfig())} />
         <link rel="manifest" href="/site.webmanifest"></link>
         <script src="/serviceWorkerRegister.js" defer></script>
